@@ -19,3 +19,5 @@
 
 正式发送文件为send.py
 运行send.py才会正式发送消息。请在务必先运行测试发送文件，避免悲剧发生！！！！！
+
+![image](https://github.com/Jun10ng/WxYearWish/blob/master/test_send_img.png)
