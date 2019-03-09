@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Pycharm
-/.idea/
+.idea
 *.pkl
 
 # C extensions

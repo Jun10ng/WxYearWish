@@ -1,6 +1,7 @@
 import time,itchat
 from filter_sendname import *
 from test_send import *
+import random
 
 # 测试发送函数
 def test_send(friendList,SEND_MSG_FORMAT):
@@ -20,7 +21,10 @@ def test_send(friendList,SEND_MSG_FORMAT):
         SEND_MSG_NAME=del_first_name(SEND_MSG_NAME)
         SEND_MSG = SEND_MSG_FORMAT.format(SEND_MSG_NAME)
 
-        print(SEND_MSG)
+        t = random.uniform(1, 5)
+
+        print(SEND_MSG+" time is")
+        print(t)
 
 # 正式发送消息函数
 def send(friendList,SEND_MSG_FORMAT):
@@ -42,5 +46,7 @@ def send(friendList,SEND_MSG_FORMAT):
         SEND_MSG = SEND_MSG_FORMAT.format(SEND_MSG_NAME)
         # 发送
         itchat.send(SEND_MSG,friend['UserName'])
-        # 每条消息发送有0.5延迟
-        time.sleep(.5)
+
+        # 每条消息发送有t延迟
+        t = random.uniform(1, 5)
+        time.sleep(t)
